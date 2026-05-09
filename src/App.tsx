@@ -9,6 +9,8 @@ import PurVloerisolatie from './pages/diensten/PurVloerisolatie';
 import PurDakisolatie from './pages/diensten/PurDakisolatie';
 import EpsIsolatie from './pages/diensten/EpsIsolatie';
 
+import AITools from './pages/AITools';
+
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +20,7 @@ function App() {
           <Route path="over-ons" element={<OverOns />} />
           <Route path="ons-werk" element={<OnsWerk />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="ai-tools" element={<AITools />} />
           
           <Route path="diensten">
             <Route path="polyurethaan-pur" element={<PolyurethaanPur />} />

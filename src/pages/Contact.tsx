@@ -46,7 +46,7 @@ export default function Contact() {
                </div>
                <div>
                  <p className="font-semibold text-brand-dark text-lg">E-mail</p>
-                 <p className="text-slate-600">info@blinkspuitisolatie.nl</p>
+                 <p className="text-slate-600 break-all">info@blinkspuitisolatie.nl</p>
                </div>
              </li>
           </ul>

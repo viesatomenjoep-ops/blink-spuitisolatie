@@ -244,7 +244,7 @@ export default function Home() {
               </div>
               <div>
                 <p className="text-sm text-slate-500 font-semibold uppercase tracking-wider">E-mail</p>
-                <p className="text-xl font-bold text-brand-dark">info@blinkspuitisolatie.nl</p>
+                <p className="text-lg font-bold text-brand-dark break-all">info@blinkspuitisolatie.nl</p>
               </div>
            </div>
            <div className="bento-card flex items-center gap-6">

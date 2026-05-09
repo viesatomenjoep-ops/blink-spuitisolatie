@@ -32,6 +32,7 @@ export default function Layout() {
               </div>
             </div>
             <Link to="/ons-werk" className="hover:text-brand-orange transition-colors">Ons werk</Link>
+            <Link to="/ai-tools" className="text-brand-orange font-bold hover:text-orange-600 transition-colors flex items-center gap-1"><Zap size={16} /> AI Demo's</Link>
             <Link to="/over-ons" className="hover:text-brand-orange transition-colors">Over ons</Link>
             <Link to="/contact" className="hover:text-brand-orange transition-colors">Contact</Link>
           </nav>
@@ -69,6 +70,7 @@ export default function Layout() {
               <li><Link to="/" className="hover:text-brand-orange transition-colors">Home</Link></li>
               <li><Link to="/over-ons" className="hover:text-brand-orange transition-colors">Over ons</Link></li>
               <li><Link to="/ons-werk" className="hover:text-brand-orange transition-colors">Ons werk</Link></li>
+              <li><Link to="/ai-tools" className="text-brand-orange font-bold hover:text-orange-600 transition-colors">AI Demo's</Link></li>
               <li><Link to="/contact" className="hover:text-brand-orange transition-colors">Contact</Link></li>
             </ul>
           </div>
@@ -100,7 +102,7 @@ export default function Layout() {
                </li>
                <li className="flex items-center gap-3">
                  <Mail className="text-brand-orange shrink-0" size={18} />
-                 <span>info@blinkspuitisolatie.nl</span>
+                 <span className="break-all text-[13px] leading-tight">info@blinkspuitisolatie.nl</span>
                </li>
              </ul>
 
