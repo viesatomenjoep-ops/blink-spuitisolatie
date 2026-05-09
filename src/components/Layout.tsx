@@ -1,0 +1,159 @@
+import { useState } from 'react';
+import { Link, Outlet } from 'react-router-dom';
+import { Phone, Mail, MapPin, Zap, Bot, ArrowRight, ArrowUpRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+export default function Layout() {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
+  return (
+    <div className="min-h-screen relative overflow-hidden bg-brand-light font-sans text-brand-dark flex flex-col">
+      {/* Top Bar for Subsidy */}
+      <div className="bg-brand-green text-white text-center py-2 px-4 text-sm font-semibold tracking-wide flex items-center justify-center gap-2">
+        <Zap size={16} />
+        Krijg tot wel 30% van je isolatiekosten terug via de subsidie-regeling (ISDE).
+      </div>
+
+      {/* Header */}
+      <header className="sticky w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div className="container mx-auto px-6 h-20 flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-2">
+            <img src="/Blink-Specialist-_1_.webp-logo.png" alt="Blink Spuitisolatie Logo" className="h-12 w-auto" />
+          </Link>
+          <nav className="hidden md:flex gap-8 font-semibold text-slate-600">
+            <Link to="/" className="hover:text-brand-orange transition-colors">Home</Link>
+            <div className="group relative">
+              <span className="hover:text-brand-orange transition-colors cursor-pointer pb-2">Topdiensten</span>
+              <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all flex flex-col p-2">
+                <Link to="/diensten/polyurethaan-pur" className="px-4 py-2 hover:bg-orange-50 hover:text-brand-orange rounded-lg">Polyurethaan (PUR)</Link>
+                <Link to="/diensten/pur-vloerisolatie" className="px-4 py-2 hover:bg-orange-50 hover:text-brand-orange rounded-lg">PUR Vloer isolatie</Link>
+                <Link to="/diensten/pur-dakisolatie" className="px-4 py-2 hover:bg-orange-50 hover:text-brand-orange rounded-lg">PUR Dak isolatie</Link>
+                <Link to="/diensten/eps-spouwmuur-bodemisolatie" className="px-4 py-2 hover:bg-orange-50 hover:text-brand-orange rounded-lg">EPS spouwmuur & bodem</Link>
+              </div>
+            </div>
+            <Link to="/ons-werk" className="hover:text-brand-orange transition-colors">Ons werk</Link>
+            <Link to="/over-ons" className="hover:text-brand-orange transition-colors">Over ons</Link>
+            <Link to="/contact" className="hover:text-brand-orange transition-colors">Contact</Link>
+          </nav>
+          <Link to="/contact" className="btn-primary py-2.5 px-6 rounded-xl hidden md:inline-flex">
+            Snel Offerte
+          </Link>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="flex-1">
+        <Outlet />
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-brand-dark text-slate-300 py-16 border-t border-slate-800 mt-auto">
+        <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+          {/* Logo & About */}
+          <div className="col-span-1 md:col-span-1">
+            <Link to="/" className="flex items-center gap-2 mb-6">
+              <img src="/Blink-Specialist-_1_.webp-logo.png" alt="Blink Spuitisolatie Logo" className="h-12 w-auto brightness-0 invert" />
+            </Link>
+            <p className="mb-6 leading-relaxed text-sm">Dé specialist in naadloze spuitisolatie voor vloeren, daken, spouwmuren en meer. Profiteer direct van de voordelen.</p>
+            <div className="flex gap-4">
+               {/* Sociaal verbinden */}
+               <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-orange transition-colors text-white"><ArrowUpRight size={18} /></a>
+               <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-orange transition-colors text-white"><ArrowUpRight size={18} /></a>
+            </div>
+          </div>
+
+          {/* Ontdekken */}
+          <div>
+            <h4 className="text-white font-bold mb-6 text-lg">Ontdekken</h4>
+            <ul className="space-y-3 text-sm">
+              <li><Link to="/" className="hover:text-brand-orange transition-colors">Home</Link></li>
+              <li><Link to="/over-ons" className="hover:text-brand-orange transition-colors">Over ons</Link></li>
+              <li><Link to="/ons-werk" className="hover:text-brand-orange transition-colors">Ons werk</Link></li>
+              <li><Link to="/contact" className="hover:text-brand-orange transition-colors">Contact</Link></li>
+            </ul>
+          </div>
+
+          {/* Topdiensten */}
+          <div>
+            <h4 className="text-white font-bold mb-6 text-lg">Topdiensten</h4>
+            <ul className="space-y-3 text-sm">
+              <li><Link to="/diensten/polyurethaan-pur" className="hover:text-brand-orange transition-colors">Polyurethaan (PUR)</Link></li>
+              <li><Link to="/diensten/pur-vloerisolatie" className="hover:text-brand-orange transition-colors">PUR Vloer isolatie</Link></li>
+              <li><Link to="/diensten/pur-dakisolatie" className="hover:text-brand-orange transition-colors">PUR Dak isolatie</Link></li>
+              <li><Link to="/diensten/eps-spouwmuur-bodemisolatie" className="hover:text-brand-orange transition-colors">EPS spouwmuur & bodem</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact & Abonneren */}
+          <div>
+             <h4 className="text-white font-bold mb-6 text-lg">Contact</h4>
+             <ul className="space-y-4 text-sm mb-8">
+               <li className="flex items-start gap-3">
+                 <MapPin className="text-brand-orange shrink-0 mt-1" size={18} />
+                 <span>Havenweg 108,<br/>Oosterhout 4905AB<br/>Noord-brabant, Nederland</span>
+               </li>
+               <li className="flex items-center gap-3">
+                 <Phone className="text-brand-orange shrink-0" size={18} />
+                 <span>+31 6 43 74 15 30</span>
+               </li>
+               <li className="flex items-center gap-3">
+                 <Mail className="text-brand-orange shrink-0" size={18} />
+                 <span>info@blinkspuitisolatie.nl</span>
+               </li>
+             </ul>
+
+             <h4 className="text-white font-bold mb-4 text-lg">Abonneren</h4>
+             <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
+               <input type="email" placeholder="E-mailadres" className="bg-slate-800 text-white px-4 py-2 rounded-lg flex-1 outline-none focus:border-brand-orange border border-transparent text-sm" />
+               <button className="bg-brand-orange px-4 py-2 rounded-lg text-white hover:bg-orange-600 transition-colors text-sm font-semibold">OK</button>
+             </form>
+          </div>
+        </div>
+        
+        <div className="container mx-auto px-6 mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+          <p>KVK: 12345678 | © 2026 Blink Spuitisolatie. Alle rechten voorbehouden.</p>
+          <div className="flex gap-4">
+             <a href="#" className="hover:text-white transition-colors">Privacybeleid</a>
+             <a href="#" className="hover:text-white transition-colors">Algemene Voorwaarden</a>
+          </div>
+        </div>
+      </footer>
+
+      {/* AI Chatbot Widget */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <motion.div 
+          initial={false}
+          animate={{ scale: isChatOpen ? 1 : 0, opacity: isChatOpen ? 1 : 0 }}
+          className="absolute bottom-20 right-0 w-80 bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden transform origin-bottom-right"
+        >
+          <div className="bg-brand-blue p-4 text-white flex justify-between items-center">
+            <div className="flex items-center gap-2 font-bold">
+              <Bot size={20} className="text-brand-orange" />
+              AI Isolatie Adviseur
+            </div>
+            <button onClick={() => setIsChatOpen(false)} className="text-slate-300 hover:text-white">&times;</button>
+          </div>
+          <div className="p-4 h-64 bg-slate-50 flex flex-col justify-end">
+            <div className="bg-white p-3 rounded-xl rounded-tl-none shadow-sm text-sm text-slate-700 max-w-[85%] mb-4 border border-slate-100">
+              Hallo! Ik ben de AI Adviseur van Blink. Hoe kan ik je vandaag helpen met besparen op je energierekening?
+            </div>
+          </div>
+          <div className="p-3 bg-white border-t border-slate-100 flex gap-2">
+            <input type="text" placeholder="Typ je vraag..." className="flex-1 bg-slate-100 rounded-lg px-3 py-2 text-sm outline-none focus:ring-2 ring-brand-orange" />
+            <button className="bg-brand-orange text-white p-2 rounded-lg hover:bg-orange-600 transition-colors">
+              <ArrowRight size={16} />
+            </button>
+          </div>
+        </motion.div>
+
+        <button 
+          onClick={() => setIsChatOpen(!isChatOpen)}
+          className="w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform active:scale-95 group"
+        >
+          <Bot size={28} className="group-hover:animate-pulse" />
+        </button>
+      </div>
+
+    </div>
+  );
+}
