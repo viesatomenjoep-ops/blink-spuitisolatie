@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-brand-light text-brand-dark font-sans antialiased;
+  }
+}
+
+@layer components {
+  .bento-card {
+    @apply bg-white rounded-3xl p-6 md:p-8 shadow-bento transition-all duration-300 hover:-translate-y-2 hover:shadow-bento-hover border border-slate-100;
+  }
+  
+  .btn-primary {
+    @apply relative overflow-hidden bg-brand-orange text-white px-8 py-4 rounded-2xl font-bold tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95;
+  }
+  
+  .btn-primary::after {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-full bg-white opacity-0 transition-opacity duration-300;
+  }
+  
+  .btn-primary:hover::after {
+    @apply opacity-20;
+  }
+  
+  .btn-secondary {
+    @apply bg-brand-blue text-white px-8 py-4 rounded-2xl font-bold tracking-wide transition-all duration-300 hover:scale-105 hover:bg-slate-800 active:scale-95;
+  }
+}
+
+/* Custom scrollbar for Swiper */
+.swiper-pagination-bullet-active {
+  background-color: theme('colors.brand.orange') !important;
+}
