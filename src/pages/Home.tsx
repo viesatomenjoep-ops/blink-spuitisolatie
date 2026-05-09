@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Bot, ArrowRight, Zap, Shield, Home as HomeIcon } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
@@ -19,6 +20,10 @@ export default function Home() {
 
   return (
     <>
+      <Helmet>
+        <title>Blink Spuitisolatie | PUR Isolatie in heel Nederland & Oosterhout</title>
+        <meta name="description" content="Dé expert in spuitisolatie, vloerisolatie en dakisolatie in Noord-Brabant en landelijk. Vraag nu een AI offerte aan en bespaar direct op je energierekening." />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
