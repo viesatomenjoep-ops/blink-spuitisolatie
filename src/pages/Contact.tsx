@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -34,7 +34,10 @@ export default function Contact() {
                </div>
                <div>
                  <p className="font-semibold text-brand-dark text-lg">Telefoon</p>
-                 <p className="text-slate-600">+31 6 43 74 15 30</p>
+                 <p className="text-slate-600 mb-2">+31 6 43 74 15 30</p>
+                 <a href="https://wa.me/31643741530?text=Hallo%20Blink%20Spuitisolatie,%20ik%20heb%20een%20vraag." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-lg font-bold text-sm hover:bg-[#128C7E] transition-colors shadow-lg">
+                   <MessageCircle size={18} /> WhatsApp Ons
+                 </a>
                </div>
              </li>
              <li className="flex items-start gap-4">

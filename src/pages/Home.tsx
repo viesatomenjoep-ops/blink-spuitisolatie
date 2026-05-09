@@ -232,8 +232,10 @@ export default function Home() {
                 <Phone size={32} />
               </div>
               <div>
-                <p className="text-sm text-slate-500 font-semibold uppercase tracking-wider">Bel Ons</p>
-                <p className="text-xl font-bold text-brand-dark">+31 6 43 74 15 30</p>
+                <p className="text-sm text-slate-500 font-semibold uppercase tracking-wider">Bel of App Ons</p>
+                <a href="https://wa.me/31643741530?text=Hallo%20Blink%20Spuitisolatie,%20ik%20heb%20een%20vraag." target="_blank" rel="noopener noreferrer" className="text-xl font-bold text-[#25D366] hover:underline flex items-center gap-2">
+                  +31 6 43 74 15 30
+                </a>
               </div>
            </div>
            <div className="bento-card flex items-center gap-6">
