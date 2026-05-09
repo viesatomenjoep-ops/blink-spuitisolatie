@@ -9,9 +9,9 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 
 const images = [
-  "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1504307651254-35680f356fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1621252179027-94459d278660?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+  "/banner1.png",
+  "/banner2.png",
+  "/banner3.png"
 ];
 
 export default function Home() {

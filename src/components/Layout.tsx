@@ -29,6 +29,8 @@ export default function Layout() {
                 <Link to="/diensten/pur-vloerisolatie" className="px-4 py-2 hover:bg-orange-50 hover:text-brand-orange rounded-lg">PUR Vloer isolatie</Link>
                 <Link to="/diensten/pur-dakisolatie" className="px-4 py-2 hover:bg-orange-50 hover:text-brand-orange rounded-lg">PUR Dak isolatie</Link>
                 <Link to="/diensten/eps-spouwmuur-bodemisolatie" className="px-4 py-2 hover:bg-orange-50 hover:text-brand-orange rounded-lg">EPS spouwmuur & bodem</Link>
+                <Link to="/diensten/pur-tankisolatie" className="px-4 py-2 hover:bg-orange-50 hover:text-brand-orange rounded-lg">PUR Tank isolatie</Link>
+                <Link to="/diensten/pur-scheepsisolatie" className="px-4 py-2 hover:bg-orange-50 hover:text-brand-orange rounded-lg">PUR Scheeps/Jacht isolatie</Link>
               </div>
             </div>
             <Link to="/ons-werk" className="hover:text-brand-orange transition-colors">Ons werk</Link>
@@ -83,6 +85,8 @@ export default function Layout() {
               <li><Link to="/diensten/pur-vloerisolatie" className="hover:text-brand-orange transition-colors">PUR Vloer isolatie</Link></li>
               <li><Link to="/diensten/pur-dakisolatie" className="hover:text-brand-orange transition-colors">PUR Dak isolatie</Link></li>
               <li><Link to="/diensten/eps-spouwmuur-bodemisolatie" className="hover:text-brand-orange transition-colors">EPS spouwmuur & bodem</Link></li>
+              <li><Link to="/diensten/pur-tankisolatie" className="hover:text-brand-orange transition-colors">PUR Tank isolatie</Link></li>
+              <li><Link to="/diensten/pur-scheepsisolatie" className="hover:text-brand-orange transition-colors">PUR Scheeps/Jacht isolatie</Link></li>
             </ul>
           </div>
 

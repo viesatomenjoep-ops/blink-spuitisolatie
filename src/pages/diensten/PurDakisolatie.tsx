@@ -26,7 +26,7 @@ export default function PurDakisolatie() {
           <Link to="/" className="btn-primary inline-block">Offerte Aanvragen</Link>
         </div>
         <div className="rounded-3xl overflow-hidden shadow-bento">
-          <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dakisolatie" className="w-full h-full object-cover" />
+          <img src="/banner2.png" alt="Dakisolatie" className="w-full h-full object-cover" />
         </div>
       </div>
     </div>

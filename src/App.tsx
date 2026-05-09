@@ -8,6 +8,8 @@ import PolyurethaanPur from './pages/diensten/Polyurethaan';
 import PurVloerisolatie from './pages/diensten/PurVloerisolatie';
 import PurDakisolatie from './pages/diensten/PurDakisolatie';
 import EpsIsolatie from './pages/diensten/EpsIsolatie';
+import PurTankisolatie from './pages/diensten/PurTankisolatie';
+import PurScheepsisolatie from './pages/diensten/PurScheepsisolatie';
 
 import AITools from './pages/AITools';
 
@@ -27,6 +29,8 @@ function App() {
             <Route path="pur-vloerisolatie" element={<PurVloerisolatie />} />
             <Route path="pur-dakisolatie" element={<PurDakisolatie />} />
             <Route path="eps-spouwmuur-bodemisolatie" element={<EpsIsolatie />} />
+            <Route path="pur-tankisolatie" element={<PurTankisolatie />} />
+            <Route path="pur-scheepsisolatie" element={<PurScheepsisolatie />} />
           </Route>
         </Route>
       </Routes>

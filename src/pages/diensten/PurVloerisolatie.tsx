@@ -26,7 +26,7 @@ export default function PurVloerisolatie() {
           <Link to="/" className="btn-primary inline-block">Offerte Aanvragen</Link>
         </div>
         <div className="rounded-3xl overflow-hidden shadow-bento">
-          <img src="https://images.unsplash.com/photo-1621252179027-94459d278660?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Vloerisolatie" className="w-full h-full object-cover" />
+          <img src="/banner3.png" alt="Vloerisolatie" className="w-full h-full object-cover" />
         </div>
       </div>
     </div>
