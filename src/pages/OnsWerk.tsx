@@ -24,12 +24,12 @@ export default function OnsWerk() {
       >
         Ons Werk
       </motion.h1>
-      <div className="flex flex-wrap gap-3 mb-12">
+      <div className="flex md:flex-wrap gap-3 mb-12 sticky top-20 z-40 bg-brand-light/95 backdrop-blur-md py-4 -mx-6 px-6 md:mx-0 md:px-0 md:bg-transparent md:backdrop-blur-none overflow-x-auto scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {categories.map((category) => (
           <button
             key={category}
             onClick={() => setActiveCategory(category)}
-            className={`px-6 py-2 rounded-full font-semibold transition-all relative ${activeCategory === category ? 'text-white' : 'bg-white text-slate-600 hover:bg-slate-50'}`}
+            className={`shrink-0 whitespace-nowrap px-6 py-2 rounded-full font-semibold transition-all relative ${activeCategory === category ? 'text-white' : 'bg-white text-slate-600 hover:bg-slate-50 shadow-sm border border-slate-100'}`}
           >
             {activeCategory === category && (
               <motion.div
