@@ -55,7 +55,7 @@ function App() {
               {images.map((src, i) => (
                 <SwiperSlide key={i}>
                   <div className="absolute inset-0 bg-brand-dark/60 z-10" />
-                  <img src={src} alt="Isolatie project" className="w-full h-full object-cover" />
+                  <img src={src} alt={`Spuitisolatie project ${i + 1} - Duurzaam isoleren met Blink`} className="w-full h-full object-cover" />
                 </SwiperSlide>
               ))}
             </Swiper>
