@@ -8,7 +8,7 @@ export default function Layout() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-brand-light font-sans text-brand-dark flex flex-col">
+    <div className="min-h-screen relative bg-brand-light font-sans text-brand-dark flex flex-col">
       {/* Top Bar for Subsidy */}
       <div className="bg-brand-green text-white text-center py-2 px-4 text-sm font-semibold tracking-wide flex items-center justify-center gap-2">
         <Zap size={16} />
