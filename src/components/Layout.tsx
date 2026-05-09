@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { Phone, Mail, MapPin, Zap, Bot, ArrowRight, ArrowUpRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Phone, Mail, MapPin, Zap, Bot, ArrowRight, ArrowUpRight, Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Layout() {
   const [isChatOpen, setIsChatOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-brand-light font-sans text-brand-dark flex flex-col">
@@ -38,10 +39,53 @@ export default function Layout() {
             <Link to="/over-ons" className="hover:text-brand-orange transition-colors">Over ons</Link>
             <Link to="/contact" className="hover:text-brand-orange transition-colors">Contact</Link>
           </nav>
-          <Link to="/contact" className="btn-primary py-2.5 px-6 rounded-xl hidden md:inline-flex">
-            Snel Offerte
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link to="/contact" className="btn-primary py-2.5 px-6 rounded-xl hidden md:inline-flex">
+              Snel Offerte
+            </Link>
+            <button 
+              className="md:hidden p-2 text-brand-dark hover:text-brand-orange transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="md:hidden bg-white border-b border-slate-100 overflow-hidden"
+            >
+              <nav className="flex flex-col px-6 py-4 space-y-4 font-semibold text-slate-600">
+                <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-brand-orange">Home</Link>
+                <div className="flex flex-col space-y-2">
+                  <span className="text-brand-orange font-bold">Topdiensten</span>
+                  <div className="flex flex-col pl-4 border-l-2 border-brand-orange/20 space-y-3 mt-2">
+                    <Link to="/diensten/polyurethaan-pur" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-brand-orange text-sm">Polyurethaan (PUR)</Link>
+                    <Link to="/diensten/pur-vloerisolatie" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-brand-orange text-sm">PUR Vloer isolatie</Link>
+                    <Link to="/diensten/pur-dakisolatie" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-brand-orange text-sm">PUR Dak isolatie</Link>
+                    <Link to="/diensten/eps-spouwmuur-bodemisolatie" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-brand-orange text-sm">EPS spouwmuur & bodem</Link>
+                    <Link to="/diensten/pur-tankisolatie" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-brand-orange text-sm">PUR Tank isolatie</Link>
+                    <Link to="/diensten/pur-scheepsisolatie" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-brand-orange text-sm">PUR Scheeps/Jacht isolatie</Link>
+                  </div>
+                </div>
+                <Link to="/ons-werk" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-brand-orange">Ons werk</Link>
+                <Link to="/ai-tools" onClick={() => setIsMobileMenuOpen(false)} className="text-brand-orange font-bold flex items-center gap-1"><Zap size={16} /> AI Demo's</Link>
+                <Link to="/over-ons" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-brand-orange">Over ons</Link>
+                <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-brand-orange">Contact</Link>
+                <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="btn-primary py-3 text-center rounded-xl mt-4">
+                  Snel Offerte Aanvragen
+                </Link>
+              </nav>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </header>
 
       {/* Main Content */}
