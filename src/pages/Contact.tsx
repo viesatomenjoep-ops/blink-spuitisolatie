@@ -46,7 +46,7 @@ export default function Contact() {
                </div>
                <div>
                  <p className="font-semibold text-brand-dark text-lg">E-mail</p>
-                 <p className="text-slate-600 break-all">info@blinkspuitisolatie.nl</p>
+                 <a href="mailto:info@blinkspuitisolatie.nl" className="text-slate-600 break-all hover:text-brand-orange transition-colors">info@blinkspuitisolatie.nl</a>
                </div>
              </li>
           </ul>

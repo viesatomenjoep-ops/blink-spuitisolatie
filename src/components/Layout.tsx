@@ -104,9 +104,9 @@ export default function Layout() {
                    +31 6 43 74 15 30 (WhatsApp)
                  </a>
                </li>
-               <li className="flex items-center gap-3">
+                <li className="flex items-center gap-3">
                  <Mail className="text-brand-orange shrink-0" size={18} />
-                 <span className="break-all text-[13px] leading-tight">info@blinkspuitisolatie.nl</span>
+                 <a href="mailto:info@blinkspuitisolatie.nl" className="break-all text-[13px] leading-tight hover:text-white transition-colors">info@blinkspuitisolatie.nl</a>
                </li>
              </ul>
 
