@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Shield, Zap, CheckCircle } from 'lucide-react';
+import { Zap, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function PolyurethaanPur() {

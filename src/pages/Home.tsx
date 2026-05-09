@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, CheckCircle, Bot, ArrowRight, Zap, Shield, Home as HomeIcon } from 'lucide-react';
+import { Phone, Mail, MapPin, Bot, ArrowRight, Zap, Shield, Home as HomeIcon } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import { Link } from 'react-router-dom';
